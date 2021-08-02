@@ -1,3 +1,4 @@
+"use strict";
 require('dotenv').config();
 const express=require("express");
 var GoogleStrategy = require('passport-google-oauth20').Strategy;
