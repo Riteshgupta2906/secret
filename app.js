@@ -37,7 +37,7 @@ app.use(passport.session());
 
 
 
-mongoose.connect("mongodb://localhost:27017/userDB",{useNewUrlParser:true});
+mongoose.connect("mongodb+srv://rkgritesh50:Ritesh2308@cluster0.y4eto.mongodb.net/userDB",{useNewUrlParser:true});
 mongoose.set("useCreateIndex",true);
 
 const userSchema= new mongoose.Schema({
