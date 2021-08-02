@@ -60,7 +60,7 @@ passport.use(User.createStrategy());
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "https://stark-bastion-06309.herokuapp.com/auth/google/secrets",
+    callbackURL: "https://secure-savannah-61823.herokuapp.com/auth/google/secrets",
     userProfileURL:"https://www.googleapis.com/oauth2/v3/userinfo"
   },
   function(accessToken, refreshToken, profile, cb) {
@@ -77,7 +77,7 @@ passport.use(new GoogleStrategy({
 passport.use(new FacebookStrategy({
   clientID: process.env.FACEBOOK_APP_ID,
   clientSecret: process.env.FACEBOOK_APP_SECRET,
-  callbackURL: "https://stark-bastion-06309.herokuapp.com/auth/facebook/secrets"
+  callbackURL: "https://secure-savannah-61823.herokuapp.com/auth/facebook/secrets"
 },
 function(accessToken, refreshToken, profile, cb) {
  
@@ -274,14 +274,4 @@ app.post("/login",function(req,res){
 })
 
 
-
-var port =process.env.PORT;
-if(port==null||port == ""){
-  port=3000;
-}
-
-
-
-app.listen(port,function(){
-    console.log("server is up");
-})
+app.listen(process.env.PORT);
