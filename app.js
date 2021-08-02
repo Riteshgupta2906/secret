@@ -1,4 +1,3 @@
-"use strict";
 require('dotenv').config();
 const express=require("express");
 var GoogleStrategy = require('passport-google-oauth20').Strategy;
@@ -275,4 +274,8 @@ app.post("/login",function(req,res){
 })
 
 
-app.listen(process.env.PORT);
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+app.listen(port);
