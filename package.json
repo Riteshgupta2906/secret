@@ -8,8 +8,8 @@
   },
   "author": "rkgpro",
   "license": "ISC",
-  "engines":{
-    "node":"14.17.3"
+  "engines": {
+    "node": "14.17.3"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
